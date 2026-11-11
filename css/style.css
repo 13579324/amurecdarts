@@ -886,6 +886,49 @@ PRODUCTS
     font-size: 18px;
 }
 
+/* DartsPrism announcement and product information */
+#darts-prism {
+    scroll-margin-top: 110px;
+}
+
+#darts-prism:target {
+    border-color: var(--green-dark);
+    box-shadow: var(--shadow);
+}
+
+.news-product-link {
+    color: var(--deep-green);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.product-release {
+    margin: 8px 0 0;
+    color: var(--deep-green);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.product-features {
+    padding: 14px 0 4px;
+    border-bottom: 1px solid var(--border);
+    color: var(--gray-dark);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.product-features p {
+    margin-bottom: 12px;
+}
+
+.product-note {
+    margin: 12px 0;
+    color: var(--gray-dark);
+    font-size: 10px;
+    line-height: 1.8;
+}
+
 
 /* =====================================================
 PRODUCT NO IMAGE
@@ -2205,7 +2248,8 @@ NEWS MOBILE
 
 .neon-theme .logo img {
     height: 54px;
-    filter: brightness(0) invert(1);
+    filter: none;
+    border-radius: 4px;
 }
 
 .neon-theme .nav {
