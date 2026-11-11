@@ -903,11 +903,32 @@ PRODUCTS
     text-underline-offset: 4px;
 }
 
+.product-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    white-space: nowrap;
+}
+
 .product-release {
-    margin: 8px 0 0;
-    color: var(--deep-green);
-    font-size: 12px;
-    font-weight: 700;
+    margin: 0;
+    color: var(--gray-dark);
+    font-size: 10px;
+    font-weight: 400;
+}
+
+@media (min-width: 1001px) and (max-width: 1150px) {
+    .product-heading {
+        gap: 5px;
+    }
+
+    .product-heading h3 {
+        font-size: 16px;
+    }
+
+    .product-release {
+        font-size: 9px;
+    }
 }
 
 .product-features {
@@ -2249,7 +2270,6 @@ NEWS MOBILE
 .neon-theme .logo img {
     height: 54px;
     filter: none;
-    border-radius: 4px;
 }
 
 .neon-theme .nav {
