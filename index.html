@@ -29,7 +29,7 @@ HEADER
         <a href="#home" class="logo">
 
             <img
-                src="images/logo.PNG"
+                src="images/amurec-logo.jpg"
                 alt="AMUREC DARTS OKINAWA"
             >
 
@@ -158,6 +158,22 @@ NEWS
 
 
         <div class="news-list">
+
+            <!-- DARTSPRISM NEWS -->
+            <details class="news-item">
+                <summary>
+                    <time datetime="2026-11-11">2026.11.11</time>
+                    <span class="news-title">新商品情報を公開しました！</span>
+                    <span class="news-icon">＋</span>
+                </summary>
+                <div class="news-detail">
+                    <div class="news-text" style="grid-column: 1 / -1;">
+                        <p>2026年12月発売予定の新型ソフトダーツマシン「DartsPrism」の商品情報を公開しました。</p>
+                        <p>主な機能やサイズは、取扱商品の紹介欄をご覧ください。</p>
+                        <p><a href="#darts-prism" class="news-product-link">DartsPrismの商品情報を見る <span aria-hidden="true">→</span></a></p>
+                    </div>
+                </div>
+            </details>
 
             <!-- NEWS 01 -->
             <details class="news-item">
@@ -637,15 +653,18 @@ PRODUCTS
 
 <!-- PRODUCT 03 -->
 
-<article class="product-card product-new">
+<article class="product-card product-new" id="darts-prism" aria-labelledby="darts-prism-title">
 
     <span class="new-badge">NEW</span>
 
     <div class="product-image">
 
         <img
-            src="images/media3.PN"
-            alt="coming soon"
+            src="images/darts-prism.png"
+            alt="DartsPrism ダーツマシン本体"
+            width="695"
+            height="1600"
+            loading="lazy"
         >
 
     </div>
@@ -657,10 +676,11 @@ PRODUCTS
             DARTS MACHINE
         </p>
 
-        <h3>
-            Coming soon
+        <h3 id="darts-prism-title">
+            DartsPrism
         </h3>
 
+        <p class="product-release">2026年12月発売予定</p>
 
         <details class="product-details">
 
@@ -679,31 +699,33 @@ PRODUCTS
 
             <div class="product-spec">
 
+                <div class="product-features">
+                    <p>基本のゲームモードに加え、ターボのキャラクターが彩る「ターボカウントアップ」を搭載。</p>
+                    <p>時間貸しに便利な「貸切タイマー」は、設定時間が経過すると終了メッセージを表示します。</p>
+                </div>
+
                 <div class="spec-row">
                     <span>高さ</span>
-                    <strong>mm</strong>
+                    <strong>2400mm</strong>
                 </div>
 
                 <div class="spec-row">
                     <span>幅</span>
-                    <strong>mm</strong>
+                    <strong>687mm</strong>
                 </div>
 
                 <div class="spec-row">
                     <span>奥行き</span>
-                    <strong>mm</strong>
+                    <strong>565mm</strong>
                 </div>
 
 
                 <div class="spec-row">
                     <span>重量</span>
-                    <strong></strong>
+                    <strong>120kg</strong>
                 </div>
 
-                <div class="spec-row">
-                    <span>消費電力</span>
-                    <strong></strong>
-                </div>
+                <p class="product-note">※上部モニターなしの場合、高さ2050mm。<br>※画像・仕様は開発中のもので、実際と異なる場合があります。</p>
 
             </div>
 
@@ -1169,7 +1191,7 @@ FOOTER
             <div class="footer-logo-image">
 
                 <img
-                    src="images/logo.PNG"
+                    src="images/amurec-logo.jpg"
                     alt="AMUREC DARTS OKINAWA"
                 >
 
@@ -1228,6 +1250,22 @@ FOOTER
 
 </footer>
 
+
+<script>
+    // Open the product details when a visitor follows its announcement link.
+    function openPrismDetails() {
+        const details = document.querySelector('#darts-prism .product-details');
+        if (details) details.open = true;
+    }
+    document.querySelectorAll('a[href="#darts-prism"]').forEach(function (link) {
+        link.addEventListener('click', openPrismDetails);
+    });
+    function openLinkedProduct() {
+        if (window.location.hash === '#darts-prism') openPrismDetails();
+    }
+    window.addEventListener('hashchange', openLinkedProduct);
+    openLinkedProduct();
+</script>
 
 </body>
 
