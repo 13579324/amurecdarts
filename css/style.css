@@ -2269,7 +2269,7 @@ NEWS MOBILE
 
 .neon-theme .logo img {
     height: 54px;
-    filter: none;
+    filter: brightness(0) invert(1);
 }
 
 .neon-theme .nav {
